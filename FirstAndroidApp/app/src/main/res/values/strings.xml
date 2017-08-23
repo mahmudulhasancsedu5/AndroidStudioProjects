@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstAndroidApp</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_in">Sign IN</string>
+    <string name="email_gmail_com">email@gmail.com</string>
+    <string name="password">password</string>
+</resources>

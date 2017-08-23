@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EventHandlingTest</string>
+    <string name="textview">You Have No Message</string>
+    <string name="goButton">Click Me</string>
+</resources>

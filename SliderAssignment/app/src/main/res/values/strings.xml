@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SliderAssignment</string>
+    <string name="buttonText">ChangeText</string>
+    <string name="displayText">Display</string>
+</resources>
