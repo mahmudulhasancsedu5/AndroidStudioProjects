@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NumberGame</string>
+    <string name="text">Guess A Number Between 1 and 1000 .Don\'t tell me what you guess.Press \'YES\' after your guess.</string>
+    <string name="no_button_text">NO</string>
+    <string name="yes_button_text">YES</string>
+    <string name="steps">Steps: 0</string>
+</resources>

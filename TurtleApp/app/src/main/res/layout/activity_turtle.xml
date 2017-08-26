@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_turtle"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.hasancsedu5gmail.turtleapp.TurtleActivity">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+
+    <RadioButton
+        android:id="@+id/leo_button"
+        android:text="Li"
+        android:checked="true"
+        android:onClick="radioClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioButton
+        android:id="@+id/mike_button"
+        android:text="Mike"
+        android:onClick="radioClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:id="@+id/don_button"
+        android:text="Don"
+        android:onClick="radioClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:id="@+id/rap_button"
+        android:text="Rap"
+        android:onClick="radioClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+
+
+  <ImageView
+      android:id="@+id/turtle_image"
+      android:src="@drawable/turtle1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="15"/>
+
+</LinearLayout>
