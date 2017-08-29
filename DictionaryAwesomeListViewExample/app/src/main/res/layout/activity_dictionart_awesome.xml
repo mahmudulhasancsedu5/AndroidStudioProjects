@@ -9,15 +9,42 @@
     android:layout_height="match_parent"
     tools:context="com.hasancsedu5gmail.dictionaryawesomelistviewexample.DictionartAwesomeActivity">
 
+
+    <TextView
+        android:id="@+id/text_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChosenWord"
+        android:textSize="30sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dictionary Application"
-        android:textSize="30sp"/>
+        android:text="Select the correct Defination"
+        android:layout_gravity="left"
+        android:textSize="20sp"/>
    <ListView
        android:id="@+id/word_list"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:entries="@array/words"></ListView>
+       android:entries="@array/word_list"></ListView>
+
+
+    <Button
+        android:id="@+id/button_add_word"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNewWordClick"
+        android:layout_gravity="center"
+        android:text="Add New Word" />
+    <TextView
+
+        android:id="@+id/text_score"
+        android:layout_width="wrap_content"
+        android:text="Score : 0/0"
+        android:layout_gravity="right|bottom"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
 
 </LinearLayout>

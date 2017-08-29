@@ -2,7 +2,7 @@
     <string name="app_name">DictionaryAwesomeListViewExample</string>
 
 
-    <string-array name="words">
+    <string-array name="word_list">
 
         <item>Book</item>
         <item>Pen</item>
