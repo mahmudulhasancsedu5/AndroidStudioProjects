@@ -23,7 +23,7 @@ public class FlagActivity extends SimpleActivity {
 
     private  static final String TAG = FlagActivity.class.getSimpleName();
 
-    private static String[] COUNTRIES = {
+    private static final String[] COUNTRIES = {
                     "afghanistan",
                     "armenia",
                     "bahamas",
