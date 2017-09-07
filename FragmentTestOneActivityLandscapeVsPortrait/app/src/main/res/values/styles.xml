@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <string-array name="namelist">
+
+        <item>Home</item>
+        <item>About Us</item>
+        <item>Services</item>
+        <item>Products</item>
+        <item>Career</item>
+        <item>Contact</item>
+
+    </string-array>
+
+
+    <string-array name="details">
+
+        <item>We are the company who love to work with latest and impossible ideas of making impossible things</item>
+        <item>Our branches are in about 7 countries in the world.
+            We provide services in Bangladesh,India,Nepal,Uk,USA,Germany and Brazil.</item>
+        <item>We make software for diffrent companies.</item>
+        <item>Android Application,ML Simulation Application,DM Simulator</item>
+        <item>200 Engineer Required</item>
+        <item>Contact : Dhaka,Bangladesh</item>
+
+    </string-array>
+
+</resources>

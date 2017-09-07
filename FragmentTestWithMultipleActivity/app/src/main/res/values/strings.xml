@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FragmentTestWithMultipleActivity</string>
+
+    <string-array name="list_items">
+
+        <item>Home</item>
+        <item>Service</item>
+        <item>Achivement</item>
+        <item>Work Environment</item>
+        <item>Career</item>
+        <item>Contact</item>
+
+    </string-array>
+
+
+    <string-array name="details">
+
+        <item>Home Details</item>
+        <item>Service Details</item>
+        <item>Achivement Details</item>
+        <item>Work Environment Details</item>
+        <item>Career Details</item>
+        <item>Contact Details</item>
+
+    </string-array>
+</resources>
