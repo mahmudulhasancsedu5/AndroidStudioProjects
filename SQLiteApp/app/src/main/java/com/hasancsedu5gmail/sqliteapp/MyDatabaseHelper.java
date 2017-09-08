@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 /**
  * Created by mahmud on 9/7/2017.
  */
@@ -45,6 +48,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         //call on create
         sqLiteDatabase.execSQL("DELETE TABLE IF EXISTS "+TABLE_NAME);
         onCreate(sqLiteDatabase);
+
+
 
     }
 

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "209055787323",
+    "firebase_url": "https://sqliteapp-65ca2.firebaseio.com",
+    "project_id": "sqliteapp-65ca2",
+    "storage_bucket": "sqliteapp-65ca2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209055787323:android:84753851fc66d53c",
+        "android_client_info": {
+          "package_name": "com.hasancsedu5gmail.sqliteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209055787323-5k3eb9q25ce7u4dqpndglv8jvvlvolsk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hasancsedu5gmail.sqliteapp",
+            "certificate_hash": "6200f88353fcce5bec11520e4f210cd12a147ec5"
+          }
+        },
+        {
+          "client_id": "209055787323-5dla8p9eqi6jcldkr46qfssa7sn1ee7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbdjieLJQ1F9VEVk4fg4_CLEr50xypYqE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209055787323-5dla8p9eqi6jcldkr46qfssa7sn1ee7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

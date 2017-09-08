@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "193898579117",
+    "firebase_url": "https://fir-gradeapp.firebaseio.com",
+    "project_id": "fir-gradeapp",
+    "storage_bucket": "fir-gradeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193898579117:android:04c43ecf18c9ec46",
+        "android_client_info": {
+          "package_name": "com.hasancsedu5gmail.firebasegradeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193898579117-c5uh4o4im4f1l0dev691ln8ftbl4lefn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hasancsedu5gmail.firebasegradeapp",
+            "certificate_hash": "6200f88353fcce5bec11520e4f210cd12a147ec5"
+          }
+        },
+        {
+          "client_id": "193898579117-8b28l7dagaiuoaj4a2dsqf7u8e0dgs8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyVXf10j0x8FhZOSUauR1t_dScyB9FLMM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193898579117-8b28l7dagaiuoaj4a2dsqf7u8e0dgs8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
