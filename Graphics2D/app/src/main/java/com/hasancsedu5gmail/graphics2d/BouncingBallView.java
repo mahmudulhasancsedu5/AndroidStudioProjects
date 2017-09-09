@@ -1,6 +1,8 @@
 package com.hasancsedu5gmail.graphics2d;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 
@@ -20,6 +22,7 @@ public class BouncingBallView extends GCanvas {
 
     public BouncingBallView(Context context, AttributeSet attrs) {
         super(context, attrs);
+
     }
 
     @Override
@@ -41,8 +44,16 @@ public class BouncingBallView extends GCanvas {
 
     }
 
+    private void drawBackGround(){
+
+        Bitmap back = BitmapFactory.decodeResource(getResources(),R.drawable.ground);
+        canvas.drawBitmap(back,0,0,null);
+    }
+
 
     public void drawOval(){
+
+
 
         oval = new GOval(50,80,100,100);
 
