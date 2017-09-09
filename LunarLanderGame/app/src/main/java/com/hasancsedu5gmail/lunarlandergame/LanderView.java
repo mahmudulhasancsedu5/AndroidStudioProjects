@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -177,7 +178,14 @@ public class LanderView  extends GCanvas{
     }
     public void stopGame(){
 
-        animationStop();
+
+        try {
+            animationStop();
+        } catch (Exception e){
+
+            Log.d("Stopanimation",e.toString());
+
+        }
 
     }
 }

@@ -2,6 +2,7 @@ package com.hasancsedu5gmail.lunarlandergame;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 public class LanderActivity extends AppCompatActivity {
@@ -27,8 +28,15 @@ public class LanderActivity extends AppCompatActivity {
 
     public void onClickStopGame(View view) {
 
-        LanderView landerView = (LanderView) findViewById(R.id.lander_1);
-        landerView.stopGame();
+
+        try {
+            LanderView landerView = (LanderView) findViewById(R.id.lander_1);
+            landerView.stopGame();
+        } catch (Exception e){
+
+            Log.d("Stop ",e.toString());
+
+        }
 
 
 
