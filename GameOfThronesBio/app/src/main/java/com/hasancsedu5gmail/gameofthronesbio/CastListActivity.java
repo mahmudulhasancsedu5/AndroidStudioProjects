@@ -17,20 +17,20 @@ public class CastListActivity extends AppCompatActivity {
 
     private static final String TAG = CastListActivity.class.getSimpleName();
     private static final String NAME_LIST = "name_list.txt";
+    private String mPersonId="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cast_list);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_cast_list);
-        addItem(linearLayout);
-
-
-
+//        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_cast_list);
+//        addItem(linearLayout);
 
 
     }
+
+
 
     private void addItem(LinearLayout linearLayout) {
 
@@ -131,16 +131,19 @@ public class CastListActivity extends AppCompatActivity {
 
         return list;
     }
-}
 
-class ButtonClicck implements View.OnClickListener {
+    public void onClickViewProfile(View view) {
 
+        TextView tvID = view.findViewById(R.id.text_view_id);
+        mPersonId=(String) tvID.getText();
 
-    @Override
-    public void onClick(View view) {
-
+        Intent intent = new Intent(this,CastDetailsActivity.class);
+        intent.putExtra("id",mPersonId);
+        startActivity(intent);
     }
 }
+
+
 
 
 

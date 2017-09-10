@@ -2,14 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:onClick="onClickViewProfile"
+    android:layout_gravity="center">
 
     <ImageButton
         android:id="@+id/image_button_cast_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <ImageView
+        android:id="@+id/image_view_cast_image_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/image_peter_dinklage"
         android:layout_gravity="center"/>
+
+
     <TextView
         android:id="@+id/text_name"
         android:layout_width="wrap_content"
@@ -22,5 +31,10 @@
         android:layout_height="wrap_content"
         android:text="Rating : +4"
         android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
 
 </LinearLayout>

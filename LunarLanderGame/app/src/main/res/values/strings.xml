@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LunarLanderGame</string>
+    <string name="stop">Stop</string>
+    <string name="play">play</string>
+    <string name="youwin">You win</string>
+    <string name="youlose">Lose</string>
 </resources>

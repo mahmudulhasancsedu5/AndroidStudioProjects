@@ -12,6 +12,14 @@
     android:layout_height="wrap_content"
     tools:context="com.hasancsedu5gmail.gameofthronesbio.CastListActivity">
 
+    <fragment
+        android:id="@+id/fragment_cast_list_id"
+        android:name="com.hasancsedu5gmail.gameofthronesbio.CastListFragment"
+        tools:layout = "@layout/fragment_cast_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </fragment>
 
 </LinearLayout>
 </ScrollView>

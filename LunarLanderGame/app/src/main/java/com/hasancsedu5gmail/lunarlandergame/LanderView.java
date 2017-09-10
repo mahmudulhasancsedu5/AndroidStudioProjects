@@ -8,12 +8,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import stanford.androidlib.graphics.GCanvas;
 import stanford.androidlib.graphics.GColor;
+import stanford.androidlib.graphics.GLabel;
 import stanford.androidlib.graphics.GSprite;
 import stanford.androidlib.util.RandomGenerator;
 
@@ -24,11 +24,16 @@ import stanford.androidlib.util.RandomGenerator;
 public class LanderView  extends GCanvas{
 
 
+    private static final int WINING_SCORE = 50;
     private Activity context;
     private GSprite rocket;
     private GSprite moonSurface;
     private int mFrame;
-    private ArrayList<GSprite> astroidList = new ArrayList<GSprite>();
+    private ArrayList<GSprite> astroidList;
+
+    private GLabel scoreLable;
+    private int score = 0;
+    GLabel gameMessage;
 
     public LanderView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -38,6 +43,7 @@ public class LanderView  extends GCanvas{
     @Override
     public void init() {
 
+        astroidList = new ArrayList<GSprite>();
         setBackgroundColor(GColor.BLUE);
 
 
@@ -104,33 +110,62 @@ public class LanderView  extends GCanvas{
         //collision
         mFrame++;
 
-        if(mFrame%50==0){
 
-            Bitmap bombImage = BitmapFactory.decodeResource(getResources(),R.drawable.granade1_transparent);
-            bombImage = Bitmap.createScaledBitmap(bombImage,bombImage.getWidth()/10,bombImage.getHeight()/10,true);
-            GSprite bomb = new GSprite(bombImage);
-            bomb.setRightX(getWidth());
-            bomb.setVelocityX(-5);
-            bomb.setCollisionMargin(10);
+        addScoreLable();
 
-            float y = RandomGenerator.getInstance().nextFloat(getHeight()-100);
-            bomb.setY(y);
-            add(bomb);
-            astroidList.add(bomb);
+        if(score>=WINING_SCORE){
+            winGame();
+//            animationStop();
+        }
 
-
+        if(mFrame%30==0){
+            addAsteroid();
+            score++;
         }
 
         doCollision();
 
     }
 
+    private void addScoreLable(){
+
+        if(scoreLable != null) scoreLable.remove();
+        scoreLable = new GLabel();
+        scoreLable.setX(100);
+        scoreLable.setY(100);
+
+
+        scoreLable.setText("Score : "+ score);
+        scoreLable.setColor(GColor.WHITE);
+        scoreLable.setFontSize(30);
+
+        add(scoreLable);
+
+    }
+
+    private void addAsteroid(){
+
+        Bitmap bombImage = BitmapFactory.decodeResource(getResources(),R.drawable.granade1_transparent);
+        bombImage = Bitmap.createScaledBitmap(bombImage,bombImage.getWidth()/10,bombImage.getHeight()/10,true);
+        GSprite bomb = new GSprite(bombImage);
+        bomb.setRightX(getWidth());
+        bomb.setVelocityX(-5);
+        bomb.setCollisionMargin(10);
+
+        float y = RandomGenerator.getInstance().nextFloat(getHeight()-100);
+        bomb.setY(y);
+        add(bomb);
+        astroidList.add(bomb);
+
+    }
+
     private void doCollision(){
+
+
 
         if(rocket.collidesWith(moonSurface)){
 
-            Toast.makeText(context,"Boom Surface",Toast.LENGTH_SHORT).show();
-            rocket.stop();
+            loseGame();
 
         }else{
 
@@ -138,9 +173,7 @@ public class LanderView  extends GCanvas{
 
                 if(rocket.collidesWith(ast)){
 
-                    Toast.makeText(context,"Boom Boom",Toast.LENGTH_SHORT).show();
-//                    animationStop();
-                    rocket.stop();
+                    loseGame();
                 }
                 else{
                     float px=ast.getX();
@@ -151,6 +184,35 @@ public class LanderView  extends GCanvas{
 
         }
 
+    }
+
+    private void winGame(){
+
+        winLoseHelper(getContext().getString(R.string.youwin));
+
+
+    }
+
+    private void loseGame(){
+
+        winLoseHelper(getContext().getString(R.string.youlose));
+    }
+
+    private void winLoseHelper(String message){
+        rocket.setVelocityY(0);
+        rocket.setAccelerationY(0);
+        gameMessage  = new GLabel();
+        gameMessage.setText(message);
+        gameMessage.setFontSize(30);
+        gameMessage.setColor(GColor.RED);
+
+        gameMessage.setX(getWidth()/2 - gameMessage.getWidth()/2);
+        gameMessage.setY(getHeight()/2 - gameMessage.getHeight()/2);
+        add(gameMessage);
+
+//        animationStop();
+
+        score = 0;
 
     }
 
@@ -172,7 +234,16 @@ public class LanderView  extends GCanvas{
 
     public void startGame(){
 
+
+        if(gameMessage != null) gameMessage.remove();
+
+        rocket.setX(getWidth()/2);
+        rocket.setY(rocket.getHeight()/2);
+        rocket.setVelocityY(5);
+
         animate(30);
+
+
 
 
     }
