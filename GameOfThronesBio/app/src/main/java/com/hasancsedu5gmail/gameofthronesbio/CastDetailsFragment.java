@@ -27,13 +27,13 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CastDetailsFragment extends Fragment{
+public class CastDetailsFragment extends Fragment {
 
     private static final String TAG = CastDetailsFragment.class.getSimpleName();
 
     private String mURL_first = "https://api.themoviedb.org/3/person/";
     private String mURL_last = "?api_key=4bc1427186392792f2410dcb78226e1f&language=en-US";
-    private String mPersoneId;
+    public static String mPersoneId;
 
     LinearLayout linearLayoutFragmentDetails;
 
@@ -47,8 +47,6 @@ public class CastDetailsFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cast_details, container, false);
     }
@@ -57,7 +55,8 @@ public class CastDetailsFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mPersoneId  = CastDetailsActivity.getId();
+//        mPersoneId  = CastDetailsActivity.getId();
+
 //        TextView textView = getActivity().findViewById(R.id.text_view_cast_name);
 //        textView.setText("id : "+mPersoneId);
         downloadPersonDetails(mPersoneId);
@@ -167,7 +166,7 @@ public class CastDetailsFragment extends Fragment{
             );
             listView.setAdapter(adapter);
 
-           
+
             //------------make list view full size
             ViewGroup.LayoutParams params = listView.getLayoutParams();
 //            params.height = listView.getHeight() + (listView.getDividerHeight() * (adapter.getCount() - 1));
@@ -192,19 +191,12 @@ public class CastDetailsFragment extends Fragment{
 
     }
 
-    private void addName(){
 
-
-    }
     private void addImageToView(String imagePath) {
         ImageView ivCast = getActivity().findViewById(R.id.image_view_cast_image);
         String imageURL = "https://image.tmdb.org/t/p/w500/" + imagePath;
         loadAddImageView(imageURL, ivCast);
     }
-
-
-
-    private void loadAddImageView(String imageUrl,ImageView imageView){
 
 //        Ion.with(context)
 //                .load("http://example.com/image.png")
@@ -216,6 +208,8 @@ public class CastDetailsFragment extends Fragment{
 //                .intoImageView(imageView);
 
 
+    private void loadAddImageView(String imageUrl,ImageView imageView){
+
         Ion.with(getActivity())
                 .load(imageUrl)
                 .withBitmap()
@@ -225,11 +219,10 @@ public class CastDetailsFragment extends Fragment{
 
     }
 
+    public static void setCastId(String persone_id){
 
-
-
-
-
-
+        mPersoneId = persone_id;
+        Log.d(TAG,"Get : "+persone_id);
+    }
 
 }

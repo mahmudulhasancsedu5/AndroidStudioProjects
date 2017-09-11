@@ -1,6 +1,8 @@
 package com.hasancsedu5gmail.gameofthronesbio;
 
+import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,12 +19,15 @@ public class CastListActivity extends AppCompatActivity {
 
     private static final String TAG = CastListActivity.class.getSimpleName();
     private static final String NAME_LIST = "name_list.txt";
-    private String mPersonId="";
+    private static String mPersonId="";
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cast_list);
+
+        fragmentManager = getFragmentManager();
 
 //        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_cast_list);
 //        addItem(linearLayout);
@@ -134,12 +139,40 @@ public class CastListActivity extends AppCompatActivity {
 
     public void onClickViewProfile(View view) {
 
+        // get selected persone id
         TextView tvID = view.findViewById(R.id.text_view_id);
         mPersonId=(String) tvID.getText();
 
-        Intent intent = new Intent(this,CastDetailsActivity.class);
-        intent.putExtra("id",mPersonId);
-        startActivity(intent);
+
+        CastDetailsFragment.setCastId(mPersonId);
+
+        if (getResources().getConfiguration().orientation ==
+                Configuration.ORIENTATION_PORTRAIT){
+            Intent intent = new Intent(this,CastDetailsActivity.class);
+            intent.putExtra("id",mPersonId);
+            startActivity(intent);
+
+        }else{
+
+            android.app.Fragment details = fragmentManager.findFragmentById(R.id.fragment_cast_detaisl_layout);
+            if(details == null) {
+                Log.d(TAG, " DetailsFragment is NULL");
+
+
+            }
+
+            Log.d(TAG," persone id : "+mPersonId);
+
+        }
+
+
+
+
+    }
+    public static String getId(){
+
+        return mPersonId.toString();
+
     }
 }
 
