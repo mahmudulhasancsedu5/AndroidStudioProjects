@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FragmentLandscapePortraitModeTest</string>
+
+    <string-array name="item_name">
+
+        <item>Home</item>
+        <item>About</item>
+        <item>Menu</item>
+        <item>Where</item>
+
+    </string-array>
+
+    <string-array name="item_details">
+        <item>
+            The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+        </item>
+        <item>In addition to our full espresso and brew bar menu,
+            we serve fresh made-to-order breakfast and lunch sandwiches,
+            as well as a selection of sides and salads and other good stuff.
+        </item>
+        <item>Bread Basket
+                Assortment of fresh baked fruit breads and muffins 5.50
+                Honey Almond Granola with Fruits
+                Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+                Belgian Waffle
+                Vanilla flavored batter with malted flour 7.50
+                Scrambled eggs
+                Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+                Blueberry Pancakes
+                With syrup, butter and lots of berries 8.50
+        </item>
+        <item>We offer full-service catering for any event, large or small. 
+            We understand your needs and we will cater the food to 
+            satisfy the biggerst criteria of them all, both look and taste.
+        </item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

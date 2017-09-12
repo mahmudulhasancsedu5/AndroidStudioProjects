@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:overScrollMode="never"
-    android:background="@color/colorPrimary">
+    android:background="#d3ffce">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,7 +20,8 @@
         android:id="@+id/image_view_cast_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:background="#ffffff"/>
     <TextView
         android:id="@+id/text_view_cast_name"
         android:layout_width="wrap_content"

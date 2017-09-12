@@ -164,6 +164,7 @@ public class CastListFragment extends Fragment {
             View castProfileView = getActivity().getLayoutInflater().inflate(R.layout.profile,null);
 
 
+
             TextView tvCastName = castProfileView.findViewById(R.id.text_name);
             tvCastName.setText(name);
 
@@ -181,6 +182,7 @@ public class CastListFragment extends Fragment {
             //-----------image view
 
             ImageView castImageView = castProfileView.findViewById(R.id.image_view_cast_image_pro);
+
             loadAddImageView(image_url,castImageView);
 
 

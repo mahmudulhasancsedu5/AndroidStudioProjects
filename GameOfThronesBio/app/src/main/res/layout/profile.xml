@@ -6,6 +6,8 @@
     android:onClick="onClickViewProfile"
     android:layout_gravity="center">
 
+    <!--android:onClick="onClickViewProfile"-->
+
     <ImageButton
         android:id="@+id/image_button_cast_image"
         android:layout_width="wrap_content"
