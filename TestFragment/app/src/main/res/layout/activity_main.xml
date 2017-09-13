@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaff00"
+    tools:context="com.hasancsedu5gmail.testfragment.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Activity"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main Activity Doc"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/text_view_main_activity_doc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Main Activity Documents"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+
+        <fragment
+            android:id="@+id/fragment_second_id"
+            android:name="com.hasancsedu5gmail.testfragment.SecondFragment"
+            tools:layout="@layout/fragment_second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></fragment>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_fast_id"
+        android:name="com.hasancsedu5gmail.testfragment.FirstFragment"
+        tools:layout="@layout/fragment_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></fragment>
+
+
+
+
+
+</LinearLayout>
