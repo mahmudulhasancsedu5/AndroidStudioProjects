@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.list_items);
 
-        CustomList adapter = new CustomList(this,mName,mImageId);
+//        CustomList adapter = new CustomList(this,mName,mImageId);
+
+        MyAdapter adapter = new MyAdapter(getApplicationContext(),mName,mImageId);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
